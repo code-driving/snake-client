@@ -15,11 +15,6 @@ const connect = function () {
   conn.on("connect", () => {
     conn.write("Name: SUN");
   });
-  // conn.on("connect", () => {
-  //   setTimeout(() => {
-  //     conn.write("Move: up");
-  //   }, 200);
-  // });
 
   return conn;
 };
