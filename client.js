@@ -7,20 +7,20 @@ const connect = function () {
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
-  
+
   conn.on("data", (data) => {
     console.log(data);
   });
-  
-  conn.on('connect', (message) => {
+
+  conn.on("connect", () => {
     conn.write("Name: SUN");
   });
-  
-  
-  
-  
-  
-  
+  // conn.on("connect", () => {
+  //   setTimeout(() => {
+  //     conn.write("Move: up");
+  //   }, 200);
+  // });
+
   return conn;
 };
 
